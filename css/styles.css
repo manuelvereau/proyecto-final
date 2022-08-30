@@ -1,0 +1,294 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+
+/*seccion header barra */
+
+.navbarra{
+    background-color: maroon;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+.navbarra .logo {
+    height: 60px;
+    width: 60px;
+    grid-column:  2 ;
+}
+
+.navbarra .inicio{
+    grid-column: 3 ;
+    display: flex;
+    justify-content: space-around;
+}
+.navbarra .inicio li{
+    list-style: none;
+}
+.navbarra .inicio a {
+    text-decoration: none;
+    color: white;
+}
+
+/* secccion menu index */
+.menu{
+    height: 80vh;
+background-image: url(../img/fotomenu.jpg);
+background-size: cover;
+max-width: 100%;
+display: grid;
+grid-template-columns: repeat(10 , 1fr);
+grid-template-rows: repeat(8 , 1fr);
+}
+.menu .info{
+    grid-column: 7/11;
+    grid-row: 3/7;
+    color: black;
+    background-color: maroon;
+    border: 1px solid red
+}
+.menu h1 {font-family: Georgia;
+font-size: 4em;}
+
+.menu h3 {font-family: 'Courier New';
+font-size: 3em;}
+
+.menu p{ font-family: Cochin;
+font-weight: 300;}
+
+.menu .info .vamosalatienda{
+    background-color: maroon;
+    padding: 10px;
+    list-style: none;
+}
+
+.menu .info .vamosalatienda a{
+    text-decoration: none;
+    color: white;
+}
+
+/* seccion footer*/
+.footer{
+    display: grid;
+    height: 80px;
+    align-items: center;
+    background-color:black;
+    color: white;
+    grid-template-areas: "horarios seguinos redessociales";
+}
+.footer .redessociales .facebook{
+    height:20 px;
+    width: 20px;
+}
+.footer .redessociales .instagram{
+    height: 20px;
+    width: 20px;
+}
+
+/* seccion menu tienda */
+
+.menutienda{
+    height: 80vh;
+    background-image: url(../img/fondotienda.jpg);
+    max-height: 100%;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+.menutienda .fondocortes{
+    grid-column: 2;
+    grid-row: 3;
+    height: 160px;
+}
+.menutienda .cortes{
+    grid-column: 2;
+    grid-row: 5;
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+    font-size: 1em;
+}
+
+.menutienda .fondomayorista{
+    grid-column: 4;
+    grid-row: 3 ;
+    height: 160px;
+}
+
+.menutienda .mayorista{
+    grid-column: 4;
+    grid-row: 5;
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+    font-size: 1em;
+}
+
+.menutienda .fondoofertas{
+    grid-column: 6;
+    grid-row: 3 ;
+    height: 160px;
+}
+.menutienda .ofertas{
+    grid-column: 6;
+    grid-row: 5;
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+    font-size: 1em;
+}
+
+/* MEDIAQUERIES*/
+
+@media(max-width: 724px){
+    .menu .info{
+      grid-column:1/6;
+      flex-direction: column;
+    }
+  
+    .menu .info h1{
+      font-size: 2em;
+    }
+  
+    .menu .info h3{
+      font-size: 1em;
+    }
+    .menutienda .fondocortes{
+      grid-column: 3/4;
+      grid-row: 2;
+      height: 130px; }
+  
+  .menutienda .fondomayorista{
+          grid-column: 3/4;
+          grid-row: 4 ;
+          height: 130px;
+      }
+  .menutienda .fondoofertas{
+          grid-column: 3/4;
+          grid-row: 6 ;
+          height: 130px;
+      } 
+  .menutienda .cortes{
+      grid-column: 5;
+      grid-row: 2;
+      display: flex;
+      align-items: center;
+  }
+  .menutienda .mayorista{
+      grid-column: 5;
+      grid-row: 4;
+      display: flex;
+      align-items: center;
+  }
+  
+  .menutienda .ofertas{
+      grid-column: 5;
+      grid-row: 6;
+      display: flex;
+      align-items: center;
+  }
+  
+      /*footer*/
+  
+      .footer .horarios{
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .footer .horarios h2{
+        font-size: 0.5em;
+      }
+    
+      .footer .seguinos h2{
+        font-size: 0.5em;}
+  }
+  @media(max-width: 425px){
+    
+    /*barra*/
+  
+    .navbarra .inicio{
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    /*menu inicio*/
+    .menu .info{
+      grid-column:1/6;
+      flex-direction: column;
+    }
+  
+    .menu .info h1{
+      font-size: 2em;
+    }
+  
+    .menu .info h3{
+      font-size: 1em;
+    }
+  
+      /*footer*/
+  
+    .footer .horarios{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .footer .horarios h2{
+      font-size: 0.5em;
+    }
+  
+    .footer .seguinos h2{
+      font-size: 0.5em;}
+  
+      /*menu tienda*/
+  
+      .menutienda .fondocortes{
+          grid-column: 2;
+          grid-row: 2;
+          height: 80px; }
+  
+      .menutienda .fondomayorista{
+              grid-column: 2;
+              grid-row: 4 ;
+              height: 80px;
+          }
+      .menutienda .fondoofertas{
+              grid-column: 2;
+              grid-row: 6 ;
+              height: 80px;
+          } 
+      .menutienda .cortes{
+          grid-column: 4;
+          grid-row: 2;
+          display: flex;
+          align-items: center;
+      }
+      .menutienda .mayorista{
+          grid-column: 4;
+          grid-row: 4;
+          display: flex;
+          align-items: center;
+      }
+  
+      .menutienda .ofertas{
+          grid-column: 4;
+          grid-row: 6;
+          display: flex;
+          align-items: center;
+      }
+      .menutienda .cortes h1{
+          font-size: 1em;
+      }
+      .menutienda .ofertas h1{
+          font-size: 1em;
+      }
+      .menutienda .mayorista h1{
+          font-size: 1em;
+      }
+  }
+
